@@ -46,6 +46,7 @@ lsp.on_attach(function(client, bufnr)
 
   vim.keymap.set("n", "<F12>", function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+  vim.keymap.set("n", "F", "<cmd> LspZeroFormat<CR>", opts)
   vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
   vim.keymap.set("n", "<leader>fe" , "<cmd> Telescope lsp_document_symbols<CR>", opts)
   vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
